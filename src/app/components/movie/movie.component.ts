@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IMovie} from "../../interfaces";
+import {MovieService} from "../../services";
 
 @Component({
   selector: 'app-movie',
@@ -10,7 +11,7 @@ export class MovieComponent implements OnInit {
 @Input()
 movie: IMovie;
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
   }

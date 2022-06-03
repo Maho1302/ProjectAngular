@@ -5,5 +5,5 @@ const {API} = environment;
 export const urls = {
   movies:`${API}/discover/movie`,
   genres:`${API}/genre/movie/list`,
-//   :`${API}/`,
+  movie:`${API}/movie`,
 }

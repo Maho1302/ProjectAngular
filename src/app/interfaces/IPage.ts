@@ -2,7 +2,7 @@ import {IMovie} from "./IMovie";
 
 export interface IPage {
   page: number
-  results: [
-    IMovie[]
-  ]
+  results: IMovie[]
+  total_pages: number
+  total_results: number
 }

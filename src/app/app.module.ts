@@ -12,6 +12,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { GenresComponent } from './components/genres/genres.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { HeaderComponent } from './components/header/header.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 const routes: Route[] = [
   {
@@ -22,6 +23,8 @@ const routes: Route[] = [
           {path: ':id', component: MovieDetailsComponent}
         ]
       },
+      // {path: 'movies', component: MoviesComponent},
+      // {path: 'movies:id', component: MovieDetailsComponent},
       {
         path: 'genres', component: GenresComponent, children: [
           {path: ':id', component: GenreComponent}
@@ -44,6 +47,7 @@ const routes: Route[] = [
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],

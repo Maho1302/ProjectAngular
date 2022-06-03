@@ -1,5 +1,5 @@
-<div routerLinkActive="active">
-  {{movie.id}}.) <a routerLink="{{movie.id}}" [state]="{movie}">{{movie.title}}</a>
-<!--  {{movie.id}} - {{movie.title}}-->
-  123
+<div  routerLinkActive="active">
+ <a routerLink="{{movie.id}}" [state]="{movie}"><img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="movie's poster"></a>
+  <div><a class="title" routerLink="{{movie.id}}" [state]="{movie}">{{movie.title}}</a></div>
+  <!--  {{movie.id}} - {{movie.title}}-->
 </div>
