@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {IMovie} from "../../interfaces";
 import {MovieService} from "../../services";
@@ -11,7 +11,7 @@ import {urls} from "../../constants";
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-  @Input()
+
   movies: IMovie[];
   movie: IMovie;
 
@@ -36,4 +36,5 @@ export class GenreComponent implements OnInit {
   redirectTo(){
     this.router.navigate([`${urls.movie}/${this.movie.id}`]);
   }
+
 }

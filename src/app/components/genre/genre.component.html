@@ -1,14 +1,17 @@
-<div class="container">
-  <app-genres></app-genres>
-  <div class="moviePre">
-    <div  class="genres" *ngFor="let movie of movies">
-      <a (click)="redirectTo()" routerLink="/movies/{{movie.id}}" [state]="{movie}">
-        <app-poster [poster]="movie.poster_path"></app-poster>
-      </a>
-      <div>
-        <a class="title" routerLink="{{movie.id}}" [state]="{movie}">{{movie.title}}</a>
+  <div class="container">
+    <app-genres></app-genres>
+    <div class="moviePre">
+      <div class="genres" *ngFor="let movie of movies">
+        <a (click)="redirectTo()" routerLink="/movies/{{movie.id}}" [state]="{movie}">
+          <app-poster [poster]="movie.poster_path"></app-poster>
+        </a>
+        <div>
+          <a class="title" routerLink="/movies/{{movie.id}}" [state]="{movie}">{{movie.title}}</a>
+        </div>
+      </div>
+      <div class="pagination">
+        <app-pagination></app-pagination>
       </div>
     </div>
   </div>
-</div>
-<!--(click)="redirectTo()"-->
+

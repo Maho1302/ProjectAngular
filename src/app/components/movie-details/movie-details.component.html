@@ -1,13 +1,15 @@
-<div class="wrap">
-  <div><img class="poster" src="https://image.tmdb.org/t/p/w400/{{movie.poster_path}}" alt="movie's poster"></div>
-  <div class="movieDescription">
-    <div class="title">{{movie.title}}</div>
-    <div>Genres: {{movie.genre_ids}}</div>
-    <div>Overview: {{movie.overview}}</div>
-    <div>Original language: {{movie.original_language}}</div>
-    <div>Original title: {{movie.original_title}}</div>
-    <!--    <div>{{movie.vote_average}}</div>-->
-    <div>Vote count: {{movie.vote_count}}</div>
+<div *ngIf="movie">
+  <div class="wrap">
+    <div><img class="poster" src="https://image.tmdb.org/t/p/w400/{{movie.poster_path}}" alt="movie's poster"></div>
+    <div class="movieDescription">
+      <div class="title">{{movie.title}}</div>
+      <div>Genres: {{movie.genre_ids}}</div>
+      <div>Overview: {{movie.overview}}</div>
+      <div>Original language: {{movie.original_language}}</div>
+      <div>Original title: {{movie.original_title}}</div>
+      <!--    <div>{{movie.vote_average}}</div>-->
+      <div>Vote count: {{movie.vote_count}}</div>
+    </div>
   </div>
 </div>
 

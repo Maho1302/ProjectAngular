@@ -4,7 +4,16 @@
   </div>
   <div class="container">
     <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+    <div class="pagination">
+      <app-pagination></app-pagination>
+    </div>
   </div>
   <router-outlet></router-outlet>
-  <!--  <ngb-pagination [collectionSize]="20" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>-->
+
 </div>
+
+<!--<pagination-controls  id="test" (pageChange)="pageChanged($event)"-->
+<!--                      [maxSize]="9"-->
+<!--                      [directionLinks]="true"-->
+<!--                      [responsive]="true">-->
+<!--</pagination-controls>-->

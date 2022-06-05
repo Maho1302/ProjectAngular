@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../../services";
 import {IMovie} from "../../interfaces";
 import {ActivatedRoute, Router} from "@angular/router";
+import {PaginationService} from "ngx-pagination";
 
 @Component({
   selector: 'app-movies',
@@ -9,23 +10,14 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-//   movies: IMovie[];
-//
-//   constructor(private movieService: MovieService) {
-//   }
-//
-//   totalLength:any;
-//   page:number = 1;
-//
-//   ngOnInit(): void {
-//     this.movieService.getAll().subscribe(value => this.movies = value.results)
-//   }
-//
-// }
+
   movies: IMovie[];
   page:number;
 
-  constructor(private movieService: MovieService, private router: Router, private route: ActivatedRoute) {
+  constructor(private movieService: MovieService,
+              private router: Router,
+              private route: ActivatedRoute,
+              private paginationService:PaginationService) {
   }
 
 
@@ -37,10 +29,19 @@ export class MoviesComponent implements OnInit {
 
       })
     })
+
+    this.paginationService.register({
+      id: 'test',
+      itemsPerPage: 20,
+      currentPage: 1,
+      totalItems: 500,
+    });
   }
 
   pageChange(num: number) {
     this.page = num
   }
+
+
 
 }
