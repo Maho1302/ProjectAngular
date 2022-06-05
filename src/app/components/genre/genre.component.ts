@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 import {IMovie} from "../../interfaces";
 import {MovieService} from "../../services";
+import {DataService} from "../../services/data.service";
+import {urls} from "../../constants";
 
 @Component({
   selector: 'app-genre',
@@ -9,10 +11,11 @@ import {MovieService} from "../../services";
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-
+  @Input()
   movies: IMovie[];
+  movie: IMovie;
 
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute, private dataService: DataService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -26,4 +29,11 @@ export class GenreComponent implements OnInit {
     })
   }
 
+  saveToStorage() {
+    this.dataService.storage.next(this.movie);
+  }
+
+  redirectTo(){
+    this.router.navigate([`${urls.movie}/${this.movie.id}`]);
+  }
 }

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.moviePre {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 70px;
+  row-gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.genres {
+  width: 300px;
+
+}
+
+.title {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+

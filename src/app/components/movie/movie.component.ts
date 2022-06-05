@@ -9,8 +9,8 @@ import {DataService} from "../../services/data.service";
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-@Input()
-movie: IMovie;
+  @Input()
+  movie: IMovie;
 
   constructor(private movieService: MovieService, private dataService: DataService) { }
 

@@ -1,7 +1,8 @@
 <div class="moviePre" routerLinkActive="active">
   <a routerLink="{{movie.id}}" [state]="{movie}" ><img class="poster"
-                                                      src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}"
-                                                      alt="movie's poster"></a>
+                                                       src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}"
+                                                       alt="movie's poster"></a>
   <div><a class="title" routerLink="{{movie.id}}" [state]="{movie}">{{movie.title}}</a></div>
 </div>
 <!--(click)="saveToStorage()"-->
+

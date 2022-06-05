@@ -25,7 +25,7 @@ export class MovieService {
     return this.httpClient.get<IGenres>(urls.genres)
   }
 
-  sortGenre(id: number,page: number = 1): Observable<IPage> {
+  sortGenre(id: number, page: number = 1): Observable<IPage> {
     return this.httpClient.get<IPage>(`${urls.movies}?with_genres=${id}`, {params: {page}})
   }
 

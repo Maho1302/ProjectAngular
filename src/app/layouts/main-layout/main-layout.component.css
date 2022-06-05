@@ -1,5 +1,6 @@
 .main {
   width: 1600px;
-  height: 2700px;
+  /*height: 2700px;*/
+  height: auto;
   margin: 0 auto;
 }

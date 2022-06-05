@@ -10,6 +10,7 @@ import {MovieService} from "../../services";
   styleUrls: ['./genres.component.css']
 })
 export class GenresComponent implements OnInit {
+
   genres: IGenre[];
 
   constructor(private movieService: MovieService, private router: Router, private datagenreService: DatagenreService) {
