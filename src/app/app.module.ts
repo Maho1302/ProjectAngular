@@ -13,23 +13,17 @@ import { GenresComponent } from './components/genres/genres.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { HeaderComponent } from './components/header/header.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { StarRatingModule } from 'angular-star-rating';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 const routes: Route[] = [
   {
     path: '', component: MainLayoutComponent, children: [
       {path: '', redirectTo: 'movies', pathMatch: 'full'},
-      {
-        path: 'movies', component: MoviesComponent, children: [
-          {path: ':id', component: MovieDetailsComponent}
-        ]
-      },
-      // {path: 'movies', component: MoviesComponent},
-      // {path: 'movies:id', component: MovieDetailsComponent},
-      {
-        path: 'genres', component: GenresComponent, children: [
-          {path: ':id', component: GenreComponent}
-        ]
-      }
+      {path: 'movies', component: MoviesComponent},
+      {path: 'movies/:id', component: MovieDetailsComponent},
+      {path: 'genres', component: GenreComponent},
     ]
   }
 ]
@@ -43,13 +37,14 @@ const routes: Route[] = [
     MovieDetailsComponent,
     GenresComponent,
     GenreComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
   ],
   providers: [
     {

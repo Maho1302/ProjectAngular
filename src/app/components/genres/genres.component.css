@@ -1,0 +1,13 @@
+.container {
+  width: 140px;
+  height: 2700px;
+  padding-top: 20px;
+  background-color: #adadad;
+}
+
+div.genre > a {
+  text-decoration: none;
+  color: #2c2a2a;
+  margin-left: 10px;
+  font-size: 18px;
+}

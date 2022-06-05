@@ -1,0 +1,14 @@
+.wrap {
+  display: flex;
+}
+
+.movieDescription {
+  color: #484444;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 36px;
+  color: #484444;
+}

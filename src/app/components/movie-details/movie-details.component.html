@@ -1,13 +1,12 @@
-<div>
-  <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="movie's poster">
-  {{movie.title}}
-  {{movie.backdrop_path}}
-  {{movie.genre_ids}}
-  {{movie.id}}
-  {{movie.original_language}}
-  {{movie.original_title}}
-  {{movie.overview}}
-  {{movie.title}}
-  {{movie.vote_average}}
-  {{movie.vote_count}}
+<div class="wrap">
+  <div><img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="movie's poster"></div>
+  <div class="movieDescription">
+    <div class="title">{{movie.title}}</div>
+    <div>Genres: {{movie.genre_ids}}</div>
+    <div>Overview: {{movie.overview}}</div>
+    <div>Original language: {{movie.original_language}}</div>
+    <div>Original title: {{movie.original_title}}</div>
+<!--    <div>{{movie.vote_average}}</div>-->
+    <div>Vote count: {{movie.vote_count}}</div>
+  </div>
 </div>

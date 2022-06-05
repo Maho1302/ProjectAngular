@@ -1,10 +1,9 @@
 .container {
   height: 70px;
-  background-color: blue;
+  background-color: #0125d7;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20%;
 }
 
 a {
@@ -13,6 +12,26 @@ a {
   color: snow;
 }
 
-.active a{
+a:first-child {
+  margin-left: 15px;
+}
+
+.active a {
   color: yellow;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  color: #2c2a2a;
+  font-size: 20px;
+}
+
+.userPhoto {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }

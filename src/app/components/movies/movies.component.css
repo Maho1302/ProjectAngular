@@ -1,6 +1,13 @@
+.wrapper {
+  display: flex;
+}
+
 .container {
   /*width: 300px;*/
   display: flex;
   flex-wrap: wrap;
-  column-gap: 40px;
+  column-gap: 70px;
+  row-gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
 }

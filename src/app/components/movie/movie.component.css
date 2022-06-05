@@ -1,5 +1,13 @@
+.moviePre {
+  width: 300px;
+}
+
 .title {
   text-decoration: none;
   color: black;
-  /*font-size: 20px;*/
+  font-size: 20px;
+}
+
+.poster {
+  border-radius: 15px;
 }

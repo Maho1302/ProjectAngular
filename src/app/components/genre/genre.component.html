@@ -1,1 +1,12 @@
-<p>genre works!</p>
+<div class="container">
+  <app-genres></app-genres>
+  <div>
+    <div *ngFor="let movie of movies">
+      <a routerLink="{{movie.id}}" [state]="{movie}">
+<!--        <app-poster-preview [poster]="movie.poster_path"></app-poster-preview>-->
+        <div>{{movie.title}}</div>
+        <div>Rating: {{movie.vote_average}}</div>
+      </a>
+    </div>
+  </div>
+</div>
