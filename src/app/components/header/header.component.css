@@ -1,6 +1,5 @@
-.container {
+.header-container {
   height: 70px;
-  background-color: #0125d7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,10 +19,9 @@ a:first-child {
   color: yellow;
 }
 
-.user {
+.header-user {
   display: flex;
   align-items: center;
-  color: #a59c9c;
   font-size: 20px;
 }
 

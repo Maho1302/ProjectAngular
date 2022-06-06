@@ -6,7 +6,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css']
+  styleUrls: ['./movies.component.css',
+    './main-layout.component.scss',]
 })
 export class MoviesComponent implements OnInit {
 
@@ -23,8 +24,6 @@ export class MoviesComponent implements OnInit {
     this.route.queryParams.subscribe( ({page}) => {
       this.movieService.getAll(page || 1).subscribe(value => {
         this.movies = value.results;
-        console.log(value.results);
-
       })
     })
 

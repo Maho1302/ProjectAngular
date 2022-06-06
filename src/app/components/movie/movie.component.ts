@@ -6,7 +6,8 @@ import {DataService} from "../../services/data.service";
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['./movie.component.css',
+    './main-layout.component.scss',]
 })
 export class MovieComponent implements OnInit {
   @Input()

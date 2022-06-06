@@ -7,11 +7,15 @@ import {DataService} from "../../services/data.service";
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['./movie-details.component.css',
+    './main-layout.component.scss',]
 })
 export class MovieDetailsComponent {
   movie: IMovie;
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private movieService: MovieService, private dataService: DataService) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private router: Router,
+              private movieService: MovieService,
+              private dataService: DataService) {
   }
 
   ngOnInit(): void {
