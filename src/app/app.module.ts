@@ -14,6 +14,7 @@ import {GenreComponent} from './components/genre/genre.component';
 import {HeaderComponent} from './components/header/header.component';
 import {PosterComponent} from './components/poster/poster.component';
 import {PaginationComponent} from "./components/pagination/pagination.component";
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Route[] = [
   {
@@ -22,6 +23,7 @@ const routes: Route[] = [
       {path: 'movies', component: MoviesComponent},
       {path: 'movies/:id', component: MovieDetailsComponent},
       {path: ':genre', component: GenreComponent},
+      {path: 'search', component: SearchComponent}
     ]
   }
 ]
@@ -38,6 +40,7 @@ const routes: Route[] = [
     HeaderComponent,
     PosterComponent,
     PaginationComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

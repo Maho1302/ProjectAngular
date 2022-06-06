@@ -1,0 +1,20 @@
+<div class="wrap">
+  <div class="form">
+<!--    <form [formGroup]>-->
+<!--      <label>Search Movie: <input type="text" formControlName="search"></label>-->
+<!--      <button class="btn" [disabled]="form.invalid" (click)="search()">Search</button>-->
+<!--    </form>-->
+<!--  </div>-->
+  <div *ngIf="searchValue" class="container">
+    <div *ngFor="let movie of searchValue">
+      <a routerLink="/movie" [state]="{movie}">
+        <div class="card">
+          <div><img class="poster" src="https://image.tmdb.org/t/p/w400/{{movie.poster_path}}" alt="movie's poster"></div>
+          <div class="txt">{{movie.title}}</div>
+          <div class="txt2">Rating: {{movie.vote_average}}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+

@@ -10,15 +10,15 @@
 a {
   text-decoration: none;
   font-size: 36px;
-  color: #999999;
+  color: #f5eee9;
 }
 
-a.dark-theme {
-  color: snow;
-}
+/*a.dark-theme {*/
+/*  color: snow;*/
+/*}*/
 
 a:first-child {
-  margin-left: 15px;
+  margin-left: 220px;
 }
 
 .active a {

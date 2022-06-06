@@ -13,7 +13,9 @@ export class GenresComponent implements OnInit {
 
   genres: IGenre[];
 
-  constructor(private movieService: MovieService, private router: Router, private datagenreService: DatagenreService) {
+  constructor(private movieService: MovieService,
+              private router: Router,
+              private datagenreService: DatagenreService) {
   }
 
   ngOnInit(): void {
