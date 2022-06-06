@@ -7,8 +7,7 @@ import {DataService} from "../../services/data.service";
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css',
-    './main-layout.component.scss',]
+  styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent {
   movie: IMovie;

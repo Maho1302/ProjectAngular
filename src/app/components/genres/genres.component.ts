@@ -7,8 +7,7 @@ import {MovieService} from "../../services";
 @Component({
   selector: 'app-genres',
   templateUrl: './genres.component.html',
-  styleUrls: ['./genres.component.css',
-    './main-layout.component.scss',]
+  styleUrls: ['./genres.component.css']
 })
 export class GenresComponent implements OnInit {
 

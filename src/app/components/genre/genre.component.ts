@@ -8,8 +8,7 @@ import {urls} from "../../constants";
 @Component({
   selector: 'app-genre',
   templateUrl: './genre.component.html',
-  styleUrls: ['./genre.component.css',
-    './main-layout.component.scss',]
+  styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
 
