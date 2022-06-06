@@ -29,5 +29,9 @@ export class MovieService {
     return this.httpClient.get<IPage>(`${urls.movies}?with_genres=${id}`, {params: {page}})
   }
 
+  search(params: string, page: number = 1): Observable<IPage> {
+    return this.httpClient.get<IPage>(`${urls.search}${params}`, {params: {page}})
+  }
+
 }
 

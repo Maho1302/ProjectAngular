@@ -37,5 +37,4 @@ export class PaginationComponent implements OnInit {
     })
     this.router.navigate([this.url], {queryParams: {page: this.page}})
   }
-
 }

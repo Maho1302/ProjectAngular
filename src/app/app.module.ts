@@ -1,22 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {Route, RouterModule} from "@angular/router";
-import { AppComponent } from './app.component';
-import {NgxPaginationModule, PaginationService} from 'ngx-pagination';
+import {AppComponent} from './app.component';
 import {MainInterceptor} from "./main.interceptor";
 
-import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { MovieComponent } from './components/movie/movie.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { GenresComponent } from './components/genres/genres.component';
-import { GenreComponent } from './components/genre/genre.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PosterComponent } from './components/poster/poster.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
-
+import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
+import {MoviesComponent} from './components/movies/movies.component';
+import {MovieComponent} from './components/movie/movie.component';
+import {MovieDetailsComponent} from './components/movie-details/movie-details.component';
+import {GenresComponent} from './components/genres/genres.component';
+import {GenreComponent} from './components/genre/genre.component';
+import {HeaderComponent} from './components/header/header.component';
+import {PosterComponent} from './components/poster/poster.component';
+import {PaginationComponent} from "./components/pagination/pagination.component";
 
 const routes: Route[] = [
   {
@@ -44,18 +41,17 @@ const routes: Route[] = [
   ],
   imports: [
     BrowserModule,
-    NgxPaginationModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
   ],
   providers: [
     {
-      provide:HTTP_INTERCEPTORS,
+      provide: HTTP_INTERCEPTORS,
       multi: true,
       useClass: MainInterceptor
     },
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
