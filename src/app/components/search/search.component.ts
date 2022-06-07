@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {MovieService} from "../../services";
 import {IMovie} from "../../interfaces";
 import {DataService} from "../../services/data.service";
+import {urls} from "../../constants";
 
 @Component({
   selector: 'app-search',
@@ -11,14 +12,14 @@ import {DataService} from "../../services/data.service";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  movie: IMovie;
   form: FormGroup;
   searchValue: IMovie[];
-  result: IMovie[];
-
+  results: IMovie[];
 
   constructor(private movieService: MovieService,
               private activatedRoute: ActivatedRoute,
+              private router: Router,
               private dataService: DataService) {
     this._createForm();
   }
@@ -34,14 +35,21 @@ export class SearchComponent implements OnInit {
 
 
   search(): void {
+    this.activatedRoute.queryParams.subscribe(({page}) => {
+      let rawValue = this.form.getRawValue();
+      this.movieService.search(rawValue.search, page || 1).subscribe(({results}) => {
+        this.searchValue = results
+      })
+    })
 
-    //   this.activatedRoute.queryParams.subscribe(({page}) => {
-    //     let rawValue = this.form.getRawValue();
-    //     this.movieService.search(rawValue.search, page || 1).subscribe(({results}) => {
-    //       this.searchValue = results
-    //     })
-    //   })
+  }
 
+  saveToStorage() {
+    this.dataService.storage.next(this.movie);
+  }
+
+  redirectTo(){
+    this.router.navigate([`${urls.movie}/${this.movie.id}`]);
   }
 }
 

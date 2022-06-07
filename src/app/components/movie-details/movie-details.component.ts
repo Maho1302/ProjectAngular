@@ -33,9 +33,9 @@ export class MovieDetailsComponent {
       }
     })
 
-    // this.dataService.storage.subscribe(value => {
-    //   this.movie = value;
-    // })
+    this.dataService.storage.subscribe(value => {
+      this.movie = value;
+    })
 
     this.datagenreService.storage.subscribe(value => {this.genres = value})
 

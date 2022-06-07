@@ -15,7 +15,10 @@ export class GenreComponent implements OnInit {
   movies: IMovie[];
   movie: IMovie;
 
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute, private dataService: DataService, private router: Router) {
+  constructor(private movieService: MovieService,
+              private activatedRoute: ActivatedRoute,
+              private dataService: DataService,
+              private router: Router) {
   }
 
   ngOnInit(): void {

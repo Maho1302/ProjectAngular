@@ -4,6 +4,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {Route, RouterModule} from "@angular/router";
 import {AppComponent} from './app.component';
 import {MainInterceptor} from "./main.interceptor";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {MoviesComponent} from './components/movies/movies.component';
@@ -21,9 +22,9 @@ const routes: Route[] = [
     path: '', component: MainLayoutComponent, children: [
       {path: '', redirectTo: 'movies', pathMatch: 'full'},
       {path: 'movies', component: MoviesComponent},
+      {path: 'search', component: SearchComponent},
       {path: 'movies/:id', component: MovieDetailsComponent},
-      {path: ':genre', component: GenreComponent},
-      {path: 'search', component: SearchComponent}
+      {path: ':genre', component: GenreComponent}
     ]
   }
 ]
@@ -45,6 +46,8 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [

@@ -30,7 +30,7 @@ export class MovieService {
   }
 
   search(params: string, page: number = 1): Observable<IPage> {
-    return this.httpClient.get<IPage>(`${urls.search}${params}`, {params: {page}})
+    return this.httpClient.get<IPage>(`${urls.search}/keyword?query=${params}`, {params: {page}})
   }
 
 }
