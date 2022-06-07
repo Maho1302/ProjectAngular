@@ -1,3 +1,7 @@
+.wrap {
+  height: 2700px;
+}
+
 .form {
   margin: 10px;
 }
@@ -29,6 +33,5 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  position: relative;
-  top: 100%;
 }
+
