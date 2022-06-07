@@ -48,8 +48,5 @@ export class MovieDetailsComponent {
       });
       this.genresNames = array
     }
-
-
   }
-
 }

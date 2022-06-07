@@ -14,7 +14,7 @@ import {urls} from "../../constants";
 export class SearchComponent implements OnInit {
   movie: IMovie;
   form: FormGroup;
-  searchValue: IMovie[];
+  searchData: IMovie[];
   results: IMovie[];
 
   constructor(private movieService: MovieService,
@@ -38,7 +38,7 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe(({page}) => {
       let rawValue = this.form.getRawValue();
       this.movieService.search(rawValue.search, page || 1).subscribe(({results}) => {
-        this.searchValue = results
+        this.searchData = results
       })
     })
 

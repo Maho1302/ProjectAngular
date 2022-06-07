@@ -24,7 +24,9 @@ const routes: Route[] = [
       {path: 'movies', component: MoviesComponent},
       {path: 'search', component: SearchComponent},
       {path: 'movies/:id', component: MovieDetailsComponent},
-      {path: ':genre', component: GenreComponent}
+      {path: ':genre', component: GenreComponent, children: [
+          {path:'movies/:id', component: MovieDetailsComponent}
+        ]}
     ]
   }
 ]

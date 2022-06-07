@@ -1,4 +1,4 @@
-<div class="wrap">
+<div>
   <div class="form">
     <form [formGroup]="form">
       <input type="text" formControlName="search">
@@ -6,15 +6,18 @@
     </form>
   </div>
 
-  <div *ngIf="searchValue" class="container">
-    <div *ngFor="let movie of searchValue">
+  <div class="container" >
+    <div *ngFor="let movie of searchData">
       <div class="moviePre" routerLinkActive="active">
-        <a  (click)="redirectTo()" routerLink="movies/{{movie.id}}" [state]="{movie}"><img class="poster"
+        <a  (click)="redirectTo()" routerLink="/movies/{{movie.id}}" [state]="{movie}"><img class="poster"
                                                             src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}"
                                                             alt="movie's poster"></a>
-        <div><a class="title" routerLink="movies/{{movie.id}}" [state]="{movie}">Title: {{movie.title}}</a></div>
+        <div><a class="title" routerLink="/movies/{{movie.id}}" [state]="{movie}">{{movie.title}}</a></div>
       </div>
     </div>
+  </div>
+  <div class="pagination">
+    <app-pagination></app-pagination>
   </div>
 </div>
 
